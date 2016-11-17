@@ -2,10 +2,12 @@ package edu.curso.java.ws;
 
 import java.util.ArrayList;
 
+import javax.jws.HandlerChain;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 
+@HandlerChain(file = "WSImpl_handler.xml")
 @WebService(serviceName = "EjemploService")
 public class WSImpl {
 	@WebMethod(operationName = "recuperarPersonaPorId")
